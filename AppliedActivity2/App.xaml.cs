@@ -1,4 +1,6 @@
-﻿namespace AppliedActivity2;
+﻿using AppliedActivity2.Services;
+
+namespace AppliedActivity2;
 
 public partial class App : Application
 {
@@ -6,6 +8,9 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+        DependencyService.Register<HolidaysDataService>();
+        DependencyService.Register<WebClientService>();
+
+        MainPage = new AppShell();
 	}
 }
