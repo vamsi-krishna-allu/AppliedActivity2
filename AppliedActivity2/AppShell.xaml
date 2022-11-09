@@ -8,7 +8,7 @@
     Shell.FlyoutBehavior="Disabled">
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Holidays">
+        <Tab Title="Menu">
             <ShellContent Title="Holidays List"
                           ContentTemplate="{DataTemplate views:MainPage}" />
             <ShellContent Title="Details"

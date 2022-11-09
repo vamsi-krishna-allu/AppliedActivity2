@@ -8,12 +8,13 @@ namespace AppliedActivity2.ViewModels
     internal class HolidaysListViewModel
     {
         public IHolidaysData<Holidays> DataStore => DependencyService.Get<IHolidaysData<Holidays>>();
-        public ObservableRangeCollection<Holidays> Holidays { get; set; }
+        public ObservableRangeCollection<Holidays> HolidaysList { get; set; }
+
         public AsyncCommand PageAppearingCommand { get; }
 
         public HolidaysListViewModel()
         {
-            Holidays = new ObservableRangeCollection<Holidays>();
+            HolidaysList = new ObservableRangeCollection<Holidays>();
             PageAppearingCommand = new AsyncCommand(PageAppearing);
         }
 
@@ -24,7 +25,7 @@ namespace AppliedActivity2.ViewModels
         {
             var holidays = await DataStore.GetHolidaysAsync();
 
-            Holidays.AddRange(holidays);
+            HolidaysList.AddRange(holidays);
         }
 
         async Task PageAppearing()

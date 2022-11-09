@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="ViewModels\ProvinceDetailViewModel.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui" Version="1.4.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	  <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />

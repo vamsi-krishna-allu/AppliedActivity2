@@ -8,20 +8,20 @@
 
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            
-
-        </VerticalStackLayout>
+        <ListView x:Name="ProvinceListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout Padding="10">
+                            <VerticalStackLayout VerticalOptions="Center">
+                                <Label Text="{Binding NameEn}" FontSize="14" TextColor="Black" FontAttributes="Bold"/>
+                                <Label Text="{Binding NameFr}" LineBreakMode="WordWrap" MaxLines="4" FontSize="14" TextColor="RoyalBlue" FontAttributes="Italic"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ScrollView>
 
 </ContentPage>
